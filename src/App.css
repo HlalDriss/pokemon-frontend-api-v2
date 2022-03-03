@@ -1,0 +1,189 @@
+.App {
+  text-align: center;
+  background:  #cccfed;
+
+}
+.Footer {
+  background-color: #3F51B5;
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+   padding-top: 20px;
+
+}
+.Footer span {
+  color: white;
+  font-size: 2.4ch;
+
+}
+
+
+.Card {
+  width: 210px;
+  height: 210px;
+  background:linear-gradient(#efd0d0, #cccfee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin:10px;
+  transition: all 0.4s ease 0s;
+  border-radius: 6px;
+  box-shadow: #282c34 1px 2px 2px ;
+  padding: 5px;
+
+
+}
+.Card:hover{
+     box-shadow: #aeaeb0 1px 6px 5px;
+  background:linear-gradient(#efd0d1, #cccfed);
+}
+
+.List-card {
+   display: grid;
+  grid-template-columns: repeat(3,max-content ) ;
+  gap:5px 5px;
+  justify-content: center;
+  align-content: space-around;
+  padding: 90px;
+}
+@media only screen and (max-width: 700px){
+   .List-card {
+     display: grid;
+     grid-template-columns: repeat(2,max-content ) ;
+     gap:1px 1px;
+     justify-content: center;
+     align-content: space-around;
+   }
+  .DialogContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 467px){
+  .List-card {
+    display: grid;
+    grid-template-columns: repeat(1,max-content ) ;
+    gap:1px 1px;
+    justify-content: center;
+    align-content: space-around;
+  }
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 7px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "hp progress-hp"
+    "attack progress-atck"
+    "defense progress-def"
+    "sp-atck progress-sp-atck"
+    "sp-def progress-sp-def"
+    "speed progress-speed";
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+}
+.DialogContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 5px;
+}
+@media screen and (max-width: 600px){
+  .container {  display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr ;
+    gap: 4px 4px;
+    grid-auto-flow: row;
+    grid-template-areas:
+
+    "hp progress-hp"
+    "attack progress-atck"
+    "defense progress-def"
+    "sp-atck progress-sp-atck"
+    "sp-def progress-sp-def"
+    "speed progress-speed"
+
+  }
+  .DialogContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+}
+
+
+
+
+.attack { grid-area: attack; }
+
+.hp { grid-area: hp; }
+
+.defense { grid-area: defense; }
+
+.sp-atck { grid-area: sp-atck; }
+
+.sp-def { grid-area: sp-def; }
+
+.speed { grid-area: speed; }
+
+.progress-hp { grid-area: progress-hp; }
+
+.progress-atck { grid-area: progress-atck; }
+
+.progress-def { grid-area: progress-def; }
+
+.progress-sp-atck { grid-area: progress-sp-atck; }
+
+.progress-sp-def { grid-area: progress-sp-def; }
+
+.progress-sp-def { grid-area: progress-speed; }
+
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
