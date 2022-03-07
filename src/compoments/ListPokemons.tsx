@@ -22,7 +22,7 @@ const ListPokemons :React.FC= () => {
     }
     const {data,fetchNextPage,hasNextPage,isFetching,isError,error,isLoading}=useInfiniteQuery(
         'sw-pokemons',
-        ({pageParam=initialUrl})=>fetchPokemons(pageParam),
+       ({pageParam=initialUrl})=>  fetchPokemons(pageParam),
         {
             getNextPageParam:((lastPage) => lastPage.data.next || undefined)
         }
@@ -72,7 +72,7 @@ const ListPokemons :React.FC= () => {
                   filterData?.map((page:any)=>{
                            return page.map((pokemon:Pokemon)=>{
 
-                                   return <CardPokemon  key={pokemon.name} name={pokemon.name} url={pokemon.url} />
+                                   return <CardPokemon data-testid="cardComponent" key={pokemon.name} name={pokemon.name} url={pokemon.url} />
 
                            })
                     })

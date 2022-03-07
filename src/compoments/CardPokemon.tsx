@@ -39,7 +39,7 @@ const CardPokemon :React.FC<Props> = ({name,url}) => {
           <>
            <div className="Card"  >
                  <img alt="imagePkom" height="110px" width="110px" src={imgUrl} />
-             <h3>{name.toLowerCase().split(' ').map(
+             <h3 data-testid="headingName">{name.toLowerCase().split(' ').map(
                  letter=>letter.charAt(0).toUpperCase()+letter.substring(1)
              )}</h3>
                <Button data-testid={"buttonOpen"} data-cy={name} className={classes.btn} variant="outlined" color="secondary" onClick={()=>SetIsOpen(true)}>
